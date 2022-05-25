@@ -1,5 +1,11 @@
 package api_tests.tests;
 
+import io.qameta.allure.AllureId;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 
@@ -12,6 +18,11 @@ public class SmokeApiTests {
     String productId = "26103430299";
 
     @Test
+    @AllureId("10113")
+    @DisplayName("Add product for comparison")
+    @Tags({@Tag("blocker"), @Tag("smoke"), @Tag("api")})
+    @Owner("allure8")
+    @Feature("API")
     void addForComparisonTest() {
         given().filter(withCustomTemplates())
                 .header("authority", "www.sportmaster.ru")
@@ -53,6 +64,11 @@ public class SmokeApiTests {
     }
 
     @Test()
+    @AllureId("10114")
+    @DisplayName("Delete product from comparison")
+    @Tags({@Tag("major"), @Tag("smoke"), @Tag("api")})
+    @Owner("allure8")
+    @Feature("API")
     void deleteFromComparisonTest() {
         given().filter(withCustomTemplates())
                 .header("authority", "www.sportmaster.ru")
@@ -129,6 +145,11 @@ public class SmokeApiTests {
     }
 
     @Test
+    @AllureId("10115")
+    @DisplayName("Check product quantity")
+    @Tags({@Tag("minor"), @Tag("smoke"), @Tag("api")})
+    @Owner("allure8")
+    @Feature("API")
     void checkProductQuantity() {
         String productId = "25572090299";
         String wareId = "187353280299";
@@ -160,6 +181,11 @@ public class SmokeApiTests {
     }
 
     @Test
+    @AllureId("10112")
+    @DisplayName("Check subscribe unavailable without captcha")
+    @Tags({@Tag("major"), @Tag("smoke"), @Tag("api")})
+    @Owner("allure8")
+    @Feature("API")
     void checkSubscribeUnavailable() {
         given().filter(withCustomTemplates())
                 .header("authority", "www.sportmaster.ru")
@@ -184,6 +210,11 @@ public class SmokeApiTests {
     }
 
     @Test
+    @AllureId("10350")
+    @DisplayName("Get auto hints")
+    @Tags({@Tag("blocker"), @Tag("smoke"), @Tag("api")})
+    @Owner("allure8")
+    @Feature("API")
     void getAutoHints() {
         String query = "test";
         String response = given().filter(withCustomTemplates())
