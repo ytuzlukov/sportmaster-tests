@@ -46,6 +46,5 @@ public class TestBase {
         if (WebDriverProvider.isVideoOn()) {
             AllureAttachments.addVideo(sessionId);
         }
-        closeWebDriver();
     }
 }
