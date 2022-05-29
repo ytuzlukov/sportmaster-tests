@@ -32,7 +32,6 @@ allure {
 }
 
 dependencies {
-    implementation 'io.joshworks.unirest:unirest-java:1.8.0'
     testImplementation(
             "com.codeborne:selenide:$selenideVersion",
             "io.qameta.allure:allure-selenide:$allureVersion",
@@ -45,7 +44,6 @@ dependencies {
             "io.rest-assured:rest-assured:$restAssuredVersion",
             "io.rest-assured:json-schema-validator:$restAssuredVersion",
             "io.qameta.allure:allure-rest-assured:$allureVersion"
-
     )
 }
 

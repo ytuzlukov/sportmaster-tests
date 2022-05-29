@@ -1,4 +1,4 @@
-package api_tests.tests;
+package api.tests;
 
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 
-import static api_tests.listeners.CustomAllureListener.withCustomTemplates;
+import static api.listeners.CustomAllureListener.withCustomTemplates;
 import static io.restassured.RestAssured.given;
 
 import static org.junit.jupiter.api.Assertions.*;

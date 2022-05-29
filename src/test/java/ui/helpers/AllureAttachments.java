@@ -1,10 +1,10 @@
-package ui_tests.helpers;
+package ui.helpers;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ui_tests.config.WebDriverProvider;
+import ui.config.WebDriverProvider;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

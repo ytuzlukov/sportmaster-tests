@@ -1,11 +1,11 @@
-package ui_tests.helpers;
+package ui.helpers;
 
 import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.opera.OperaOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import ui_tests.config.WebDriverProvider;
+import ui.config.WebDriverProvider;
 
 public class DriverConfig {
     public static void configure() {

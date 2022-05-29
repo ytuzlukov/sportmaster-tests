@@ -1,4 +1,4 @@
-package ui_tests.config;
+package ui.config;
 
 import org.aeonbits.owner.ConfigFactory;
 

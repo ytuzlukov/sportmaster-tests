@@ -1,4 +1,4 @@
-package ui_tests.helpers;
+package ui.helpers;
 
 import com.codeborne.selenide.Selenide;
 import org.openqa.selenium.OutputType;
@@ -6,7 +6,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ui_tests.config.WebDriverProvider;
+import ui.config.WebDriverProvider;
 
 import java.net.MalformedURLException;
 import java.net.URL;

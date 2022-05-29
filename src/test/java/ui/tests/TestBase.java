@@ -1,4 +1,4 @@
-package ui_tests.tests;
+package ui.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
@@ -7,10 +7,10 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import ui_tests.config.WebDriverProvider;
-import ui_tests.helpers.AllureAttachments;
-import ui_tests.helpers.DriverConfig;
-import ui_tests.helpers.DriverUtils;
+import ui.config.WebDriverProvider;
+import ui.helpers.AllureAttachments;
+import ui.helpers.DriverConfig;
+import ui.helpers.DriverUtils;
 
 import static com.codeborne.selenide.Selenide.open;
 

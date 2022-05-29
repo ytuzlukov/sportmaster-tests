@@ -1,4 +1,4 @@
-package api_tests.models;
+package api.models;
 
 public class GenerateTokenResponse {
     /*
