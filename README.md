@@ -62,6 +62,8 @@ Jenkins is an automation server which lets us run tests
 
 Click <a target="_blank" href="https://jenkins.autotests.cloud/job/%D1%8111_sportmaster_tuzlukov/">here</a> to see Jenkins project
 
+Click <a target="_blank" href="https://allure.autotests.cloud/project/1331/launches">here</a> to see testops integration and <a target="_blank" href="https://allure.autotests.cloud/project/1331/test-cases?treeId=2542">here</a> for test cases
+
 <p align="center">
 <img title="Parameters configuration" src="images/jenkins-main.png">
 </p>
