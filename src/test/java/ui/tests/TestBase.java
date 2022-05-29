@@ -25,7 +25,7 @@ public class TestBase {
 
     @BeforeEach
     void precondition() {
-        open(Configuration.baseUrl);
+        open("");
     }
 
     @BeforeAll
