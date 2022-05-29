@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import ui.pages.MainPage;
 
-public class CityRecognizeModalTests {
+public class CityRecognizeModalTests extends TestBase {
 
     MainPage mainPage = new MainPage();
 

@@ -7,17 +7,15 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
-import ui.pages.AbstractCategoryPage;
-import ui.pages.AbstractProductPage;
+import ui.pages.CommonCategoryPage;
+import ui.pages.CommonProductPage;
 import ui.pages.MainPage;
-
-import static com.codeborne.selenide.Selenide.open;
 
 public class AddToCartTests extends TestBase {
 
     MainPage mainPage = new MainPage();
-    AbstractCategoryPage categoryPage = new AbstractCategoryPage();
-    AbstractProductPage productPage = new AbstractProductPage();
+    CommonCategoryPage categoryPage = new CommonCategoryPage();
+    CommonProductPage productPage = new CommonProductPage();
 
     @Test
     @AllureId("10106")
@@ -28,8 +26,8 @@ public class AddToCartTests extends TestBase {
     public void addToCartFromProductPage() {
         mainPage.clickOnAcceptCookieAgreementButton();
 
-        open("https://www.sportmaster.ru/product/23306930299/?skuId=180070910299");
-        productPage.clickOnAddToCartButton()
+        productPage.openCommonProduct()
+                .clickOnAddToCartButton()
                 .checkCartItemHaveText("1");
     }
 
@@ -42,8 +40,8 @@ public class AddToCartTests extends TestBase {
     public void addToCartFromCategoryPage() {
         mainPage.clickOnAcceptCookieAgreementButton();
 
-        open("https://www.sportmaster.ru/catalog/zhenskaya_obuv/krossovki/");
-        categoryPage.hoverOnProductCard()
+        categoryPage.openCommonCategoryPage()
+                .hoverOnProductCard()
                 .clickOnAddToCartButton()
                 .checkSizeChooseModalVisible()
                 .clickOnSize("37")

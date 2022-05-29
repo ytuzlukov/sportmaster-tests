@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import ui.pages.MainPage;
 
-public class MainPageElementVisibleTests {
+public class MainPageElementVisibleTests extends TestBase{
 
     MainPage mainPage = new MainPage();
 

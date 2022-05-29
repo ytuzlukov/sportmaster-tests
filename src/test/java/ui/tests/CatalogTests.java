@@ -1,6 +1,6 @@
 package ui.tests;
 
-import ui.pages.AbstractCategoryPage;
+import ui.pages.CommonCategoryPage;
 import ui.pages.MainPage;
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 public class CatalogTests extends TestBase {
 
     MainPage mainPage = new MainPage();
-    AbstractCategoryPage categoryPage = new AbstractCategoryPage();
+    CommonCategoryPage categoryPage = new CommonCategoryPage();
 
     @Test
     @AllureId("10098")
@@ -22,7 +22,6 @@ public class CatalogTests extends TestBase {
     @Owner("allure8")
     @Feature("UI")
     public void openCorrectCategoryCheck() {
-        String checkUrl = "https://www.sportmaster.ru/catalog/zhenskaya_odezhda/dzhempery_i_svitery/";
         mainPage.checkCityConfirmModalVisible()
                 .clickOnRightCityButton()
                 .checkCityConfirmModalNotVisible()
@@ -30,7 +29,7 @@ public class CatalogTests extends TestBase {
                 .checkCatalogVisible()
                 .clickOnSomeCategory();
 
-        categoryPage.checkCorrectPageOpened(checkUrl);
+        categoryPage.checkCorrectPageOpened();
     }
 
 

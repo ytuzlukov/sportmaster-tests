@@ -132,9 +132,9 @@ public class MainPage {
         return this;
     }
 
-    public AbstractCategoryPage clickOnSomeCategory() {
+    public CommonCategoryPage clickOnSomeCategory() {
         catalogSomeCategory.click();
-        return new AbstractCategoryPage();
+        return new CommonCategoryPage();
     }
 
 }

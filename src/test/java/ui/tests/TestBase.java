@@ -12,6 +12,7 @@ import ui.helpers.AllureAttachments;
 import ui.helpers.DriverConfig;
 import ui.helpers.DriverUtils;
 
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TestBase {
@@ -19,11 +20,12 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.browserSize = "1600x900";
+        Configuration.baseUrl = "https://www.sportmaster.ru/";
     }
 
     @BeforeEach
     void precondition() {
-        open("https://www.sportmaster.ru/");
+        open(Configuration.baseUrl);
     }
 
     @BeforeAll
@@ -44,5 +46,6 @@ public class TestBase {
         if (WebDriverProvider.isVideoOn()) {
             AllureAttachments.addVideo(sessionId);
         }
+        closeWebDriver();
     }
 }

@@ -10,7 +10,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.WebDriverConditions.urlStartingWith;
 
-public class AbstractProductPage {
+public class CommonProductPage {
 
     private SelenideElement addToCartButton = $(By.xpath("//button[@data-selenium='addToCartButton']"));
     private SelenideElement cartItem = $(By.xpath("//span[@data-selenium='sm_badge_item']"));
@@ -19,42 +19,47 @@ public class AbstractProductPage {
     private ElementsCollection activeSizes = $$(By.xpath("//div[@data-selenium='product-sizes-item' and not (contains(@class,'disabled'))]"));
     private final SelenideElement cookieAgreementButton = $(By.xpath("//div[@class='sm-cookie-agreement']//button[@data-selenium='smButton']"));
 
-    public AbstractProductPage checkCorrectPageOpened(final String data) {
+    public CommonProductPage checkCorrectPageOpened(final String data) {
         webdriver().shouldHave(urlStartingWith(data));
         return this;
     }
 
-    public AbstractProductPage clickOnAcceptCookieAgreementButton() {
+    public CommonProductPage openCommonProduct() {
+        open("product/23306930299/?skuId=180070910299");
+        return this;
+    }
+
+    public CommonProductPage clickOnAcceptCookieAgreementButton() {
         cookieAgreementButton.click();
         return this;
     }
 
-    public AbstractProductPage clickOnAddToCartButton() {
+    public CommonProductPage clickOnAddToCartButton() {
         addToCartButton.click();
         return this;
     }
 
-    public AbstractProductPage checkCartItemHaveText(String itemText) {
+    public CommonProductPage checkCartItemHaveText(String itemText) {
         cartItem.shouldHave(Condition.text(itemText));
         return this;
     }
 
-    public AbstractProductPage clickOnAddToCartFromSizeModalButton() {
+    public CommonProductPage clickOnAddToCartFromSizeModalButton() {
         addToCartFromSizeModal.click();
         return this;
     }
 
-    public AbstractProductPage checkSizeChooseModalVisible() {
+    public CommonProductPage checkSizeChooseModalVisible() {
         chooseSizeModal.shouldBe(visible);
         return this;
     }
 
-    public AbstractProductPage checkSizeChooseModalNotVisible() {
+    public CommonProductPage checkSizeChooseModalNotVisible() {
         chooseSizeModal.shouldNotBe(visible);
         return this;
     }
 
-    public AbstractProductPage clickOnSize(String size) {
+    public CommonProductPage clickOnSize(String size) {
         activeSizes.findBy(text(size)).click();
         return this;
     }
